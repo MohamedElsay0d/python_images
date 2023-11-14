@@ -9,5 +9,4 @@ jobs:
     runs-on: ubuntu-latest 
       
     steps:
-      - name: 'Welcome Page'
-        run: echo 'Hello , I am Mohamed ElSayed'
+      - uses: actions/checkout@v3
