@@ -2,6 +2,6 @@ FROM python:3
 
 WORKDIR /app
 
-COPY main.py /app/main.py
+COPY index.py /app/index.py
 
 CMD ["python", "index.py"]
