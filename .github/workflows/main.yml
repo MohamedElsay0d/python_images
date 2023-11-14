@@ -10,9 +10,12 @@ jobs:
       
     steps:
       - uses: actions/checkout@v3
+      
       - name: 'login to Docker Hub'
-        run: docker login --username ${{ secrets.DOCKER_USERNAME}} --password ${{ secrets.DOCKER_TOKEN}}
+        run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_TOKEN }}
+        
       - name: 'Build Docker Image'
-        run: docker build -t ${{ secrets.DOCKER_USERNAME}}/github_python_image .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/githubimage .
+        
       - name: 'Push to Docker Hub'
-        run: docker push ${{ secrets.DOCKER_USERNAME}}/github_python_image
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/githubimage
